@@ -26,8 +26,8 @@ def proof_of_work(last_proof):
     proof = 3126
     #  TODO: Your code here
     while valid_proof(last_hash, proof) is False:
-        if timer() - start > 30:
-            print("Taking more than 30 seconds, trying again")
+        if timer() - start > 45:
+            print("Taking more than 45 seconds, trying again")
             return None
         proof += 1
     print("Proof found: " + str(proof) + " in " + str(timer() - start))
